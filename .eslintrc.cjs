@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 module.exports = {
   env: { browser: true, es2020: true },
   extends: [
@@ -20,6 +19,13 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   plugins: ['react-refresh'],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+    process: true,
+    __dirname: true,
+    module: true,
+  },
   rules: {
     'react-refresh/only-export-components': 'warn',
     'no-undef': 'warn',
